@@ -1,0 +1,7 @@
+.card-item {
+  margin: 100px 0;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
