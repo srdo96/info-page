@@ -1,7 +1,23 @@
 .card-item {
-  margin: 100px 0;
+  margin: 25px 20px;
 }
 .container {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 60px 0;
+}
+button {
+  color: white;
+  padding: 0.7em 1em;
+  outline: none;
+  background-color: #3cefff;
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(45, 48, 88);
+  overflow: hidden;
+  cursor: pointer;
 }

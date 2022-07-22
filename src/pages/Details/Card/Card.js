@@ -1,12 +1,13 @@
 import React from "react";
 import "./Card.css";
-const Card = () => {
+const Card = ({ person }) => {
+  const { name, birth_year } = person;
   return (
     <div className="card-item">
       <div className="container">
         <div>
           <h4>Name</h4>
-          <p>Luke Skywalker</p>
+          <p>{name}</p>
         </div>
         <div>
           <h4>Home World</h4>
@@ -14,9 +15,11 @@ const Card = () => {
         </div>
         <div>
           <h4>Birth Year</h4>
-          <p>19BBYY</p>
+          <p>{birth_year}</p>
         </div>
-        <button>View Details</button>
+        <div>
+          <button>View Details</button>
+        </div>
       </div>
     </div>
   );
