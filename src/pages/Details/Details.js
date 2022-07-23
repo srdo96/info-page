@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Card from "./Card/Card";
+import useFetcher from "./hooks/useFetcher";
 const Details = () => {
-  const [people, setPeople] = useState({});
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    fetch("https://swapi.dev/api/people")
-      .then((res) => res.json())
-      .then((data) => {
-        setPeople(data);
-        setLoading(false);
-      });
-  }, []);
-
+  const url = "https://swapi.dev/api/people";
+  const [people, loading] = useFetcher(url);
   if (loading) return <p>Loading ...</p>;
   console.log(people);
 
